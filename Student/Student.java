@@ -1,23 +1,68 @@
 package StudentManager;
 
-    public class Student {
-        public int id;
-        public String name;
-        public String className;
+public class Student {
+    private String rollNo,fullName,address,email;
+    private String DBO;
+    private int Status;
 
-        public Student(int id, String name, String className) {
-            this.id = id;
-            this.name = name;
-            this.className = className;
-        }
-
-        @Override
-        public String toString() {
-            return "Student{" +
-                    "id=" + id +
-                    ", name='" + name + '\'' +
-                    ", className='" + className + '\'' +
-                    '}';
-        }
+    public Student(String rollNo, String fullName, String address, String email, String DBO, int status) {
+        this.rollNo = rollNo;
+        this.fullName = fullName;
+        this.address = address;
+        this.email = email;
+        this.DBO = DBO;
+        Status = status;
     }
 
+    public String getRollNo() {
+        return rollNo;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getDBO() {
+        return DBO;
+    }
+
+    public int getStatus() {
+        return Status;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setDBO(String DBO) {
+        this.DBO = DBO;
+    }
+
+    public void setStatus(int status) {
+        Status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "rollNo='" + rollNo + '\'' +
+                ", fullName='" + fullName + '\'' +
+                ", address='" + address + '\'' +
+                ", email='" + email + '\'' +
+                ", DBO='" + DBO + '\'' +
+                ", Status=" + Status +
+                '}';
+    }
+}
